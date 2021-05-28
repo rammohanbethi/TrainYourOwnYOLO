@@ -26,4 +26,4 @@ Input Data, Output Data, Model Weights and Results
 Utility scripts used by main scripts
 
 
-Thank you [AntonMu](https://github.com/AntonMu) for custom yoloV3 model.
+Thank you
