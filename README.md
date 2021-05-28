@@ -1,29 +1,21 @@
-# custom-YOLOV3-object-detection--NEW
+# TrainYourOwnYOLO
 
-# TrainYourOwnYOLO: Training
+This repo let's you train a custom image detector using the state-of-the-art YOLOv3 computer vision algorithm.This repo works with TensorFlow 2.3 and Keras 2.4.
 
+# To build and test your YOLO object detection algorithm follow the below steps:
+
+## Image Annotation
+1. Install Microsoft's Visual Object Tagging Tool (VoTT)
+2. Annotate images
 ## Training
-Using the training images located in [`TrainYourOwnYOLO/Data/Source_Images/Training_Images`](/Data/Source_Images/Training_Images) and the annotation file [`data_train.txt`](/Data/Source_Images/Training_Images/vott-csv-export) which we have created in the [previous step](/1_Image_Annotation/) we are now ready to train our YOLOv3 detector. 
+1. Download pre-trained weights
+2. Train your custom YOLO model on annotated images
+## Inference
+1. Detect objects in new images and videos
 
-## Download and Convert Pre-Trained Weights
-Before getting started download the pre-trained YOLOv3 weights and convert them to the keras format. To run both steps run the download and conversion script from within the [`TrainYourOwnYOLO/2_Training`](/2_Training/) directory:
-
-```
-python Download_and_Convert_YOLO_weights.py
-```
-To list available command line options run `python Download_and_Convert_YOLO_weights.py -h`.
-
-The weights are pre-trained on the [ImageNet 1000 dataset](http://image-net.org/challenges/LSVRC/2015/index) and thus work well for object detection tasks that are very similar to the types of images and objects in the ImageNet 1000 dataset.
-
-## Train YOLOv3 Detector
-To start the training, run the training script from within the [`TrainYourOwnYOLO/2_Training`](/2_Training/) directory:
-```
-python Train_YOLO.py 
-```
-Depending on your set-up, this process can take a few minutes to a few hours. The final weights are saved in [`TrainYourOwnYOLO/Data/Model_weights`](/Data/Model_weights). To list available command line options run `python Train_YOLO.py -h`.
-
-If training is too slow on your local machine, consider using cloud computing services such as AWS to speed things up. To learn more about training on AWS navigate to [`TrainYourOwnYOLO/2_Training/AWS`](/2_Training/AWS).
-
-### That's all for training! 
-Next, go to [`TrainYourOwnYOLO/3_Inference`](/3_Inference) to test your YOLO detector on new images!
-
+# GitHub Repository structure
+1_Image_Annotation: Scripts and instructions on annotating images
+2_Training: Scripts and instructions on training your YOLOv3 model
+3_Inference: Scripts and instructions on testing your trained YOLO model on new images and videos
+Data: Input Data, Output Data, Model Weights and Results
+Utils: Utility scripts used by main scripts
