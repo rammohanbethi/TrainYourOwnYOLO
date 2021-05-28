@@ -24,3 +24,6 @@ Scripts and instructions on testing your trained YOLO model on new images and vi
 Input Data, Output Data, Model Weights and Results
 ### Utils: 
 Utility scripts used by main scripts
+
+
+Thank you [AntonMu](https://github.com/AntonMu) for custom yoloV3 model.
